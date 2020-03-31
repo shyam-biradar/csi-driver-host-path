@@ -47,6 +47,8 @@ spec:
           volumeMounts:
           - mountPath: /csi
             name: socket-dir
+          securityContext:
+            privileged: true  
 
       volumes:
         - hostPath:
