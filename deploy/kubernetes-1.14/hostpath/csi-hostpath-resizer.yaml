@@ -47,6 +47,8 @@ spec:
           volumeMounts:
             - mountPath: /csi
               name: socket-dir
+          securityContext:
+            privileged: true    
       volumes:
         - hostPath:
             path: /var/lib/kubelet/plugins/csi-hostpath
